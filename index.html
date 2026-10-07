@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin & Mila Wedding Invitation</title>
+    <!-- 字體載入 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        morandi: {
+                            warm: '#d4a373',
+                            sage: '#8da399',
+                            cream: '#fcfbfa',
+                            sand: '#f4ede2',
+                            dark: '#4a4543',
+                            muted: '#7a726e'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', '"Noto Serif TC"', 'serif'],
+                        sans: ['"Noto Serif TC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif TC', serif;
+            background-color: #fcfbfa;
+            color: #4a4543;
+            overflow-x: hidden;
+        }
+        .font-en {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* 防止關鍵地點與捷運站名斷行 */
+        .no-break {
+            white-space: nowrap;
+        }
+        /* 毛玻璃質感 */
+        .glass-nav {
+            background: rgba(252, 251, 250, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 30px rgba(141, 163, 153, 0.12);
+        }
+        /* 藝術感計時器白色微光卡片 */
+        .time-card {
+            background: #ffffff;
+            box-shadow: 0 8px 24px rgba(212, 163, 115, 0.15);
+            border: 1px solid rgba(212, 163, 115, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-morandi-cream text-morandi-dark antialiased">
+
+    <!-- 1. 頂端固定毛玻璃質感導航列 -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-morandi-sand/60 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="font-en text-xl md:text-2xl tracking-widest font-semibold text-morandi-warm">
+                Kevin & Mila
+            </a>
+            <nav class="hidden md:flex space-x-10 text-sm tracking-widest uppercase">
+                <a href="#about" class="hover:text-morandi-warm transition-colors">關於我們 <span class="font-en text-xs text-morandi-muted lowercase">/ about</span></a>
+                <a href="#details" class="hover:text-morandi-warm transition-colors">婚禮詳情 <span class="font-en text-xs text-morandi-muted lowercase">/ details</span></a>
+                <a href="#rsvp" class="hover:text-morandi-warm transition-colors">出席回函 <span class="font-en text-xs text-morandi-muted lowercase">/ rsvp</span></a>
+            </nav>
+            <!-- 手機版漢堡選單按鈕 -->
+            <button id="menu-btn" class="md:hidden text-morandi-dark focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- 手機版下拉選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-morandi-cream/95 border-b border-morandi-sand px-6 py-4 space-y-3">
+            <a href="#about" class="block text-sm tracking-widest py-1">關於我們 ABOUT</a>
+            <a href="#details" class="block text-sm tracking-widest py-1">婚禮詳情 DETAILS</a>
+            <a href="#rsvp" class="block text-sm tracking-widest py-1">出席回函 RSVP</a>
+        </div>
+    </header>
+
+    <!-- 3. 首頁全螢幕封面背景 -->
+    <section id="home" class="relative h-screen flex items-center justify-center text-center px-4">
+        <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('https://i.postimg.cc/PxVWb6kF/romantic-wedding-backgroundwedding-valentine-engagement-anniversary-theme-511010-2972.avif');">
+            <!-- 柔和色調濾鏡遮罩 -->
+            <div class="absolute inset-0 bg-morandi-dark/30 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-morandi-cream/40"></div>
+        </div>
+        <div class="relative z-10 max-w-2xl mx-auto text-white mt-12">
+            <p class="font-en tracking-[0.3em] uppercase text-sm md:text-base text-morandi-sand mb-3">Our Love Story</p>
+            <h1 class="font-en text-4xl md:text-6xl lg:text-7xl font-semibold tracking-wider mb-4 drop-shadow-md">
+                Kevin & Mila
+            </h1>
+            <p class="text-lg md:text-xl font-light tracking-widest text-morandi-sand/90 mb-8">
+                相遇、相知、相守
+            </p>
+            <div class="w-12 h-[1px] bg-morandi-sand/60 mx-auto mb-8"></div>
+            <p class="font-en text-sm tracking-widest uppercase">Save the Date · <span class="no-break">2027.01.31</span></p>
+        </div>
+    </section>
+
+    <!-- 關於我們區塊 (Vertical V-Card 風格) -->
+    <section id="about" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="font-en text-xs tracking-[0.25em] uppercase text-morandi-sage block mb-2">Our Chapter</span>
+            <h2 class="text-3xl md:text-4xl font-light tracking-wide">關於我們</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div class="glass-card p-8 rounded-2xl border border-morandi-sage/20 text-center">
+                <div class="w-24 h-24 mx-auto rounded-full bg-morandi-sage/20 mb-6 flex items-center justify-center font-en text-2xl text-morandi-sage">K</div>
+                <h3 class="font-en text-xl font-semibold tracking-wider mb-2">Kevin Kuo</h3>
+                <p class="text-xs font-en text-morandi-warm tracking-widest uppercase mb-4">Groom / 郭天霖</p>
+                <p class="text-sm text-morandi-muted leading-relaxed">帶著理工人的嚴謹與溫柔，在每一個平凡的日子裡，給予最堅定且安穩的陪伴。</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl border border-morandi-warm/20 text-center">
+                <div class="w-24 h-24 mx-auto rounded-full bg-morandi-warm/20 mb-6 flex items-center justify-center font-en text-2xl text-morandi-warm">M</div>
+                <h3 class="font-en text-xl font-semibold tracking-wider mb-2">Mila Chou</h3>
+                <p class="text-xs font-en text-morandi-warm tracking-widest uppercase mb-4">Bride / 周莉庭</p>
+                <p class="text-sm text-morandi-muted leading-relaxed">用視覺設計的細膩與浪漫，捕捉生活中的光影，將所有的美好溫柔收藏。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. 藝術感計時器視覺 (白色微光卡片、柔和陰影與圓角) -->
+    <section class="py-16 bg-morandi-sand/50 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="font-en text-xs tracking-[0.25em] uppercase text-morandi-warm block mb-2">Countdown To Forever</span>
+            <h3 class="text-2xl md:text-3xl font-light mb-10">距離幸福倒數</h3>
+            
+            <div id="countdown" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-2xl mx-auto">
+                <!-- Days -->
+                <div class="time-card rounded-2xl p-6 text-center">
+                    <span id="days" class="font-en text-3xl md:text-5xl font-semibold text-morandi-warm block mb-1">00</span>
+                    <span class="text-xs font-en tracking-widest text-morandi-muted uppercase">Days / 天</span>
+                </div>
+                <!-- Hours -->
+                <div class="time-card rounded-2xl p-6 text-center">
+                    <span id="hours" class="font-en text-3xl md:text-5xl font-semibold text-morandi-warm block mb-1">00</span>
+                    <span class="text-xs font-en tracking-widest text-morandi-muted uppercase">Hours / 時</span>
+                </div>
+                <!-- Minutes -->
+                <div class="time-card rounded-2xl p-6 text-center">
+                    <span id="minutes" class="font-en text-3xl md:text-5xl font-semibold text-morandi-warm block mb-1">00</span>
+                    <span class="text-xs font-en tracking-widest text-morandi-muted uppercase">Minutes / 分</span>
+                </div>
+                <!-- Seconds -->
+                <div class="time-card rounded-2xl p-6 text-center">
+                    <span id="seconds" class="font-en text-3xl md:text-5xl font-semibold text-morandi-warm block mb-1">00</span>
+                    <span class="text-xs font-en tracking-widest text-morandi-muted uppercase">Seconds / 秒</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 婚禮詳情與交通指引 (交通指引為隱藏摺疊面板) -->
+    <section id="details" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="font-en text-xs tracking-[0.25em] uppercase text-morandi-sage block mb-2">Wedding Information</span>
+            <h2 class="text-3xl md:text-4xl font-light tracking-wide">婚禮詳情</h2>
+        </div>
+
+        <div class="space-y-6">
+            <!-- 宴客地點卡片 -->
+            <div class="glass-card p-8 rounded-2xl border border-morandi-sand">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div>
+                        <span class="font-en text-xs text-morandi-warm tracking-widest uppercase block mb-1">Banquet Venue</span>
+                        <h3 class="text-xl font-semibold mb-2"><span class="no-break">新莊典華 亞瑟廳</span></h3>
+                 
